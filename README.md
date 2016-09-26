@@ -1,0 +1,2 @@
+# minideez
+Adaptation Deezer simplifié

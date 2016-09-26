@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+   <html lang="fr">
+   <head>
+        <meta charset="utf-8" />
+        <title>Minideezer</title>	
+        <link rel="stylesheet" href="css/front.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    </head>
+
+    <body>
+        <div id="dz-root"></div>
+        <div id="logo">
+            <p>
+                <a href="https://connect.deezer.com/oauth/auth.php?app_id=186864&redirect_uri=http://localhost/minideezer/&perms=basic_access,email,offline_access,manage_library,delete_library,listening_history " alt="Deezer">
+                    <img src="logos/LogoDeezer2.png" alt="Deezer" width="200" height="100">
+                </a>
+            </p>
+        </div>
+
+    <div id="controlers">
+        <div id="album_list">
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/27d46442638986e0adf40a4ced0a951b/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(12811378); return false;" value="Album1"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/64c9c69b50b616b122cedd1eba0dd4a3/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(12753680); return false;" value="Album2"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/28134e629c5e7fa9b4d624428363df76/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(12002452); return false;" value="Album3"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/87f10909e97ac2d1512539dacb2238e5/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(11160500); return false;" value="Album4"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/19050c428789d4acee3b017d872815ff/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(10803730); return false;" value="Album5"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/2e279d58823100da2367d16bbab96971/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(6377178); return false;" value="Album6"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/b27c965b658986163ac6d83b38f03815/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(13366297); return false;" value="Album7"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/38c98da4d2f9ec3ea0ce1b7e2e48be87/250x250-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(12865022); return false;" value="Album8"/>
+    	   <input type="image" src="https://cdns-images.dzcdn.net/images/cover/fe65d2962624a2db00cc15054554fb66/500x500-000000-80-0-0.jpg" width="100" onclick="DZ.player.playAlbum(6262806); return false;" value="Album9"/>
+        </div>
+        <div id="playlist1_list">
+    	   <input type="button" onclick="DZ.player.playPlaylist(1121970341); return false;" value="Minipalylist du moment"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1205203421); return false;" value="Travail"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1946003302); return false;" value="Folk"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1264268651); return false;" value="Dancefloor Indie"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1471933025); return false;" value="Dancefloor 80"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1393304455); return false;" value="Dancefloor world"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1242869911); return false;" value="Dancefloor garage"/>
+            <input type="button" onclick="DZ.player.playPlaylist(1267295441); return false;" value="Dancefloor dance"/>
+        </div>
+        <div id="playlist2_list">
+    	   <input type="button" onclick="DZ.player.playPlaylist(157684271); DZ.player.setShuffle(true); return false;" value="AperoTime 1"/>
+            <input type="button" onclick="DZ.player.playPlaylist(86870021); DZ.player.setShuffle(true); return false;" value="AperoTime 2"/>
+            <input type="button" onclick="DZ.player.playPlaylist(27483818); DZ.player.setShuffle(true); return false;" value="AperoTime 3"/>
+            <input type="button" onclick="DZ.player.playPlaylist(15805186); DZ.player.setShuffle(true); return false;" value="Pulp Friction"/>
+            <input type="button" onclick="DZ.player.playPlaylist(26520643); DZ.player.setShuffle(true); return false;" value="Rare groove 5"/>
+            <input type="button" onclick="DZ.player.playPlaylist(948718625); DZ.player.setShuffle(true); return false;" value="Blue Note jazz"/>
+        </div>
+        <br>
+        <div id="control_play">
+        	<input type="image" src="logos/d-pause.png" height="100" width="100" onclick="DZ.player.pause(); return false;" value="pause"/>
+        	<input type="image" src="logos/d-play.png" height="100" width="100" onclick="DZ.player.play(); return false;" value="play"/>
+        	<input type="image" src="logos/d-next.png" height="100" width="100" onclick="DZ.player.next(); return false;" value="next"/>
+        </div>
+        <div id="control_shuffle">
+        	<img src="logos/d-shuffle-on.png" alt="Deezer" width="20">
+            <input type="radio" name="shuffle" value="Shuffle Off" onclick="DZ.player.setShuffle(false);" checked/>OFF
+            <input type="radio" name="shuffle" value="Shuffle On" onclick="DZ.player.setShuffle(true);" />ON
+        </div>
+        <div id="control_volume">
+        	<img src="logos/d-volume.png" alt="volume" width="20">
+            <input type="radio" name="volume" value="volume_0" onclick="DZ.player.setVolume(0);" />00%
+            <input type="radio" name="volume" value="volume_20" onclick="DZ.player.setVolume(20);" />20%
+            <input type="radio" name="volume" value="volume_50" onclick="DZ.player.setVolume(50);" />50%
+            <input type="radio" name="volume" value="volume_80" onclick="DZ.player.setVolume(80);" checked/>80%
+    	</div>
+        <br/><br/>
+    </div>
+    <div id="slider_seek" class="progressbarplay" style="">
+      <div class="bar" style="width: 0%;"></div>
+    </div>
+    <script>
+    	$(document).ready(function(){
+    		$("#controlers input").attr('disabled', true);
+    		$("#slider_seek").click(function(evt,arg){
+    			var left = evt.offsetX;
+    			console.log(evt.offsetX, $(this).width(), evt.offsetX/$(this).width());
+    			DZ.player.seek((evt.offsetX/$(this).width()) * 100);
+    		});
+    	});
+    	function event_listener_append() {
+    		var pre = document.getElementById('event_listener');
+    		var line = [];
+    		for (var i = 0; i < arguments.length; i++) {
+    			line.push(arguments[i]);
+    		}
+    		pre.innerHTML = line.join(' ') + "\n" + pre.innerHTML;
+    	}
+    	function onPlayerLoaded() {
+    		$("#controlers input").attr('disabled', false);
+    		event_listener_append('Le lecteur est pret ...');
+
+    		DZ.Event.subscribe('current_track', function(arg){
+    			event_listener_append('A l ecoute :', arg.index, '-', arg.track.artist.name, '-', arg.track.title, '(', arg.track.album.title, ')');
+    		});
+ 
+           DZ.Event.subscribe('player_position', function(arg){
+                $("#slider_seek").find('.bar').css('width', (100*arg[0]/arg[1]) + '%');
+            });
+    	}
+    	DZ.init({
+    		appId  : '186864',
+    		channelUrl : 'http://192.168.1.16/minideezer/',
+    		player : {
+    			onload : onPlayerLoaded
+    		}
+    	});
+    </script><br/>
+    Messages : <br/>
+    <pre id="event_listener" style="height:150px;overflow:auto;"></pre>
+    </body>
+    </html>
